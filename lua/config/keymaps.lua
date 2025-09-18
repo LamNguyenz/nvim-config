@@ -3,11 +3,11 @@
 -- Add any additional keymaps here
 vim.api.nvim_set_keymap("i", "jj", "<Esc>", { noremap = false })
 
--- K -> run command :lineBreakInsert
-vim.api.nvim_set_keymap("n", "K", ":lineBreakInsert<CR>", { noremap = true, silent = true })
+-- in your LazyVim config
+vim.keymap.set("n", "L", function()
+  vim.cmd("bnext " .. vim.v.count1)
+end, { desc = "Next buffer (count supported)" })
 
--- L -> go to end of line ($)
-vim.api.nvim_set_keymap("n", "L", "$", { noremap = true, silent = true })
-
--- H -> go to beginning of line (^)
-vim.api.nvim_set_keymap("n", "H", "^", { noremap = true, silent = true })
+vim.keymap.set("n", "H", function()
+  vim.cmd("bprevious " .. vim.v.count1)
+end, { desc = "Previous buffer (count supported)" })

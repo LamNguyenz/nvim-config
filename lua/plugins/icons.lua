@@ -10,14 +10,14 @@ return {
         [".gitignore"] = {
           icon = "󰊢",
           color = "#f1502f",
-          name = "Gitignore"
+          name = "Gitignore",
         },
       },
       override_by_extension = {
         ["log"] = {
           icon = "󰦪",
           color = "#81e043",
-          name = "Log"
+          name = "Log",
         },
       },
     },
@@ -28,7 +28,7 @@ return {
 
   -- Mini icons (alternative icon provider)
   {
-    "echasnovski/mini.icons",
+    "nvim-mini/mini.icons",
     opts = {},
     lazy = true,
     specs = {

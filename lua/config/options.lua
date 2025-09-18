@@ -12,3 +12,5 @@ vim.g.loaded_netrwPlugin = 1
 -- Ensure proper encoding
 vim.opt.encoding = "utf-8"
 vim.opt.fileencoding = "utf-8"
+
+vim.opt.scrolloff = 8
